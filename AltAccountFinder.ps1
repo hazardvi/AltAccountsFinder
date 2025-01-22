@@ -18,7 +18,7 @@ if (Test-Path $featherFilePath) {
     Write-Output "The Feather client accounts.json file could not be found at: $featherFilePath"
 }
 
-Write-Output "\nProcessing Lunar client accounts..."
+Write-Output "Processing Lunar client accounts..."
 if (Test-Path $lunarFilePath) {
     try {
         $lunarData = Get-Content $lunarFilePath -Raw | ConvertFrom-Json
@@ -46,5 +46,5 @@ if (Test-Path $lunarFilePath) {
     Write-Output "The Lunar client accounts.json file could not be found at: $lunarFilePath"
 }
 
-Write-Host "\nProcessing completed. Press Enter to exit."
+Write-Host "Processing completed. Press Enter to exit."
 Read-Host
